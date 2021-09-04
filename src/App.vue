@@ -1,15 +1,18 @@
 <template>
   <ButtonSample />
+  <DialogSample />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import ButtonSample from './components/buttons/ButtonSample.vue'
+import DialogSample from './components/dialogs/DialogSample.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    ButtonSample
+    ButtonSample,
+    DialogSample
   },
 })
 </script>
