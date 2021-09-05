@@ -1,5 +1,5 @@
 <template>
-    <teleport v-if="visible" to="body">
+    <teleport v-if="isVisible" to="body">
         <!-- 以下要素がbodyセレクタ内に描画される -->
         <div
             v-bind="$attrs"
@@ -32,7 +32,7 @@ import { defineComponent, watchEffect } from 'vue'
 export default defineComponent({
     name: 'Dislog',
     props: {
-        visible: {
+        isVisible: {
             type: Boolean,
             required: true
         }
@@ -44,7 +44,7 @@ export default defineComponent({
         }
 
         watchEffect((onInvalidate) => {
-            if(!props.visible) return
+            if(!props.isVisible) return
 
             const overflow = document.documentElement.style.overflow
             document.documentElement.style.overflow = 'hidden'

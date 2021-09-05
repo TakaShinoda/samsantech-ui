@@ -2,7 +2,7 @@
     <div>
         <p class="mb-2 text-2xl">Dialogs</p>
         <div>
-            <Dialog :visible="dialogVisible" @backdrop-clicked="switchDialog">
+            <Dialog :is-visible="dialogVisible" @backdrop-clicked="switchDialog">
                 <template #title>
                     <p class="font-bold">ダイアログ</p>
                 </template>
