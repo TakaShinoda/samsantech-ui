@@ -8,7 +8,7 @@
             <PrimaryButton :disabled="true" @click="handleClick">Primary Disabled</PrimaryButton>
         </div>
         <div class="mb-2">
-            <SecondaryButton @click="handleClick">Primary</SecondaryButton>
+            <SecondaryButton @click="handleClick">Secondary</SecondaryButton>
         </div>
         <div class="mb-2">
             <SecondaryButton :disabled="true" @click="handleClick">Secondary Disabled</SecondaryButton>
