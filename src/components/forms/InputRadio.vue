@@ -62,12 +62,12 @@ export default defineComponent({
             emit('update:checked', props.value)
         }
 
-        const handleFocus = () => {
+        const handleFocus = (event: Event) => {
             isFocus.value = true
             emit('focus', event)
         }
 
-        const handleBlur = () => {
+        const handleBlur = (event: Event) => {
             isFocus.value = false
             emit('blur', event)
         }
