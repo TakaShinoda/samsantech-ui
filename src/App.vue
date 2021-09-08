@@ -1,4 +1,5 @@
 <template>
+  <ContentsLoaderSample />
   <ButtonSample />
   <DialogSample />
   <InputTextSample />
@@ -11,6 +12,7 @@ import ButtonSample from './components/buttons/ButtonSample.vue'
 import DialogSample from './components/dialogs/DialogSample.vue'
 import InputTextSample from './components/forms/InputTextSample.vue'
 import InputRadioSample from './components/forms/InputRadioSample.vue'
+import ContentsLoaderSample from './components/loader/ContentsLoaderSample.vue'
 
 export default defineComponent({
   name: 'App',
@@ -18,7 +20,8 @@ export default defineComponent({
     ButtonSample,
     DialogSample,
     InputTextSample,
-    InputRadioSample
+    InputRadioSample,
+    ContentsLoaderSample
   },
 })
 </script>
