@@ -4,6 +4,7 @@
             <div
                 v-if="isOneLine || n>=1"
                 :key="`line-${n}`"
+                data-test="long-loader"
                 class="
                     relative
                     w-full
@@ -28,6 +29,7 @@
             <div
                 v-else
                 :key="`line-${n}`"
+                data-test="half-loader"
                 class="
                     relative
                     w-1/2
