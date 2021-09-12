@@ -26,7 +26,7 @@
 import { defineComponent, ref } from 'vue'
 import Dialog from './Dialog.vue'
 import PrimaryButton from '../buttons/PrimaryButton.vue'
-import SecondryButton from '../buttons/SuccessButton.vue'
+import SecondryButton from '../buttons/SecondaryButton.vue'
 
 export default defineComponent({
     name: 'DialogSample',
