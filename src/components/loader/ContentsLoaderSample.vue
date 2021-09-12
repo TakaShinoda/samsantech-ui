@@ -1,7 +1,7 @@
 <template>
     <div>
         <p class="mb-2 text-2xl">ContentsLoader</p>
-        <ContentsLoader :line="2"/>
+        <ContentsLoader :line="2" />
     </div>
     <div>
         <p>fetch data</p>
@@ -10,7 +10,7 @@
                 <PostView />
             </template>
             <template #fallback>
-                <ContentsLoader :line="3"/>
+                <ContentsLoader :line="3" />
             </template>
         </Suspense>
     </div>

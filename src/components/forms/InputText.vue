@@ -27,7 +27,8 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType, ref } from 'vue'
+import { computed, defineComponent, PropType } from 'vue'
+import { useFocus } from '../../composables/eventHandler'
 
 export default defineComponent({
     name: 'InputText',
@@ -66,7 +67,11 @@ export default defineComponent({
         'update:value': (modelValue: string) => true
     },
     setup(props, { emit }) {
-        const isFocus = ref(false)
+        const {
+            isFocus,
+            handleFocus,
+            handleBlur
+        } = useFocus({ eventName: 'focus'}, { eventName: 'blur'})
 
         const handleInput = ({ target }: { target: HTMLInputElement}) => {
             emit('input', target.value)
@@ -76,16 +81,6 @@ export default defineComponent({
         const handleChange = ({ target }: { target: HTMLInputElement}) => {
             emit('change', target.value)
             emit('update:value', target.value)
-        }
-
-        const handleFocus = (event: Event) => {
-            isFocus.value = true
-            emit('focus', event)
-        }
-
-        const handleBlur = (event: Event) => {
-            isFocus.value = false
-            emit('blur', event)
         }
 
         const smallLabelClass = computed(() => 
