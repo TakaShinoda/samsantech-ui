@@ -1,5 +1,5 @@
 <template>
-    <button class="px-2 rounded-md h-11" @click="handleClick">
+    <button class="px-3 rounded-md h-10" @click="handleClick">
         <slot />
     </button>
 </template>

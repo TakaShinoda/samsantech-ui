@@ -1,5 +1,10 @@
 <template>
-    <BaseButton :disabled="disabled" :class="buttonClass" @click="handleClick">
+    <BaseButton
+        :disabled="disabled"
+        :class="buttonClass"
+        class="text-white bg-secondary font-medium"
+        @click="handleClick"
+    >
         <slot />
     </BaseButton>
 </template>
@@ -28,7 +33,7 @@ export default defineComponent({
         }
 
         const buttonClass = computed(() => 
-            props.disabled ? 'text-gray-400 bg-gray-100' : 'text-gray-900 bg-gray-200'
+            props.disabled ? 'opacity-50 cursor-not-allowed' : 'hover:opacity-95'
         )
 
         return {
