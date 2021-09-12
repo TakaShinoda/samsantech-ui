@@ -12,7 +12,6 @@ export const useFocus = (
         eventName: string
     }
 ) => {
-    console.log(getCurrentInstance())
     const emit = getCurrentInstance()?.emit
     const isFocus = ref(false)
 
