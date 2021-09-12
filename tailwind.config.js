@@ -2,7 +2,19 @@ module.exports = {
   purge: ['./index.html', './src/**/*.{vue,js,ts}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#015BAB',
+        },
+        secondary: {
+          DEFAULT: '#47AB32',
+        },
+        danger: {
+          DEFAULT: '#D74411'
+        }
+      }
+    },
   },
   variants: {
     // extend: {},
