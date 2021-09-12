@@ -14,6 +14,12 @@
             <SecondaryButton :disabled="true" @click="handleClick">Secondary Disabled</SecondaryButton>
         </div>
         <div class="mb-2">
+            <SuccessButton @click="handleClick">Success</SuccessButton>
+        </div>
+        <div class="mb-2">
+            <SuccessButton :disabled="true" @click="handleClick">Success Disabled</SuccessButton>
+        </div>
+        <div class="mb-2">
             <DangerButton @click="handleClick">Danger</DangerButton>
         </div>
         <div class="mb-2">
@@ -26,6 +32,7 @@
 import { defineComponent } from 'vue'
 import PrimaryButton from './PrimaryButton.vue'
 import SecondaryButton from './SecondaryButton.vue'
+import SuccessButton from './SuccessButton.vue'
 import DangerButton from './DangerButton.vue'
 
 export default defineComponent({
@@ -33,6 +40,7 @@ export default defineComponent({
     components: {
         PrimaryButton,
         SecondaryButton,
+        SuccessButton,
         DangerButton
     },
     emits: {
