@@ -36,10 +36,10 @@ describe('useFocus', () => {
       expect(vm.emitted(FOCUS_EVENT_NAME)).toBeTruthy()
     })
 
-    // test('The value will be emitted.', () => {
-    //   handleFocus(10)
-    //   expect(vm.emitted(FOCUS_EVENT_NAME)?.[0]).toEqual([10])
-    // })
+    test('The value will be emitted.', () => {
+      handleFocus(10)
+      expect(vm.emitted(FOCUS_EVENT_NAME)?.[0]).toEqual([10])
+    })
   })
 
   describe('handleBlur', () => {
@@ -53,9 +53,9 @@ describe('useFocus', () => {
       expect(vm.emitted(BLUR_EVENT_NAME)).toBeTruthy()
     })
 
-    // test('The value will be emitted.', () => {
-    //   handleBlur(10)
-    //   expect(vm.emitted(BLUR_EVENT_NAME)?.[0]).toEqual([10])
-    // })
+    test('The value will be emitted.', () => {
+      handleBlur(10)
+      expect(vm.emitted(BLUR_EVENT_NAME)?.[0]).toEqual([10])
+    })
   })
 })
