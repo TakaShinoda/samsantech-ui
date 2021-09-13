@@ -1,9 +1,9 @@
 <template>
-  <ContentsLoaderSample />
   <ButtonSample />
-  <DialogSample />
   <InputTextSample />
   <InputRadioSample />
+  <ContentsLoaderSample />
+  <DialogSample />
 </template>
 
 <script lang="ts">
