@@ -1,11 +1,7 @@
-# Vue 3 + Typescript + Vite
+![samsantech](https://user-images.githubusercontent.com/45593212/133090943-40d8b13f-0b46-4eb1-b04c-362e30dc1ac3.png)
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
 
-## Recommended IDE Setup
+<div align="center">
+This is the Vue component of Samsun Tech, a fictional company that appears in the drama <a href="https://www.netflix.com/jp/title/81290293?s=i&trkid=13747225&vlang=ja&clip=81341972" target="_blank" rel="noopener noreferrer">Startup</a> on Netflix.
+</div>
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
-
-## Type Support For `.vue` Imports in TS
-
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
