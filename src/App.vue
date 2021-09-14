@@ -2,6 +2,7 @@
   <ButtonSample />
   <InputTextSample />
   <InputRadioSample />
+  <TextAreaSample />
   <ContentsLoaderSample />
   <DialogSample />
 </template>
@@ -13,6 +14,7 @@ import DialogSample from './components/dialogs/DialogSample.vue'
 import InputTextSample from './components/forms/InputTextSample.vue'
 import InputRadioSample from './components/forms/InputRadioSample.vue'
 import ContentsLoaderSample from './components/loader/ContentsLoaderSample.vue'
+import TextAreaSample from './components/textarea/TextAreaSample.vue'
 
 export default defineComponent({
   name: 'App',
@@ -21,7 +23,8 @@ export default defineComponent({
     DialogSample,
     InputTextSample,
     InputRadioSample,
-    ContentsLoaderSample
+    ContentsLoaderSample,
+    TextAreaSample
   },
 })
 </script>
