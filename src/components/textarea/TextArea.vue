@@ -1,6 +1,7 @@
 <template>
     <textarea
         class="border-2 border-solid rounded-md p-2"
+        :class="`${errorClass}`"
         :name="name"
         :value="value"
         :placeholder="placeholder"
@@ -11,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { computed, defineComponent } from 'vue'
 
 export default defineComponent({
     name: 'TextArea',
@@ -33,21 +34,32 @@ export default defineComponent({
         rows: {
             type: Number,
             required: false,
-            default: 2
+            default: 4
         },
         cols: {
             type: Number,
             required: false,
-            default: 20
+            default: 30
+        },
+        isError: {
+            type: Boolean,
+            required: false,
+            default: false
         }
     },
     emits: ['input'],
-    setup(_, {emit}) {
-        const updateValue = (e: any) => {
-            emit('input', e.target.value)
+    setup(props, { emit }) {
+        const updateValue = ({ target }: { target: HTMLInputElement }) => {
+            emit('input', target.value)
         }
+
+        const errorClass = computed(() => 
+            props.isError ? 'border-red-400' : ''
+        )
+
         return {
-            updateValue
+            updateValue,
+            errorClass
         }
     },
 })
