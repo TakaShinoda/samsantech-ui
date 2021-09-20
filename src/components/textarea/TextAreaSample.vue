@@ -3,13 +3,14 @@
         <p class="mb-2 text-2xl">TextArea</p>
         <div>
             <TextArea
-                v-model="inputTextAreaValue"
+                v-model:value="inputTextAreaValue"
                 name="sample"
             />
         </div>
         <div>
             <p>disable</p>
             <TextArea
+                v-model:value="inputTextAreaDisabledValue"
                 name="sample-disable"
                 :disabled="true"
             />
@@ -17,6 +18,7 @@
         <div>
             <p>error</p>
             <TextArea
+                v-model:value="inputTextAreaErrorValue"
                 name="sample-error"
                 :is-error="true"
             />
@@ -35,9 +37,13 @@ export default defineComponent({
     },
     setup() {
         const inputTextAreaValue = ref('')
+        const inputTextAreaDisabledValue = ref('')
+        const inputTextAreaErrorValue = ref('error')
 
         return {
-            inputTextAreaValue
+            inputTextAreaValue,
+            inputTextAreaDisabledValue,
+            inputTextAreaErrorValue
         }
         
     },

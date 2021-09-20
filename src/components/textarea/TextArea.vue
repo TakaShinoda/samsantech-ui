@@ -47,10 +47,10 @@ export default defineComponent({
             default: false
         }
     },
-    emits: ['input'],
+    emits: ['update:value'],
     setup(props, { emit }) {
         const updateValue = ({ target }: { target: HTMLInputElement }) => {
-            emit('input', target.value)
+            emit('update:value', target.value)
         }
 
         const errorClass = computed(() => 
