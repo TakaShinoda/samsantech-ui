@@ -1,12 +1,32 @@
 {
   "name": "samsantech-ui",
   "version": "0.0.0",
+  "repository": "https://github.com/TakaShinoda/samsantech-ui.git",
   "scripts": {
     "dev": "vite",
     "tsc": "vue-tsc --noEmit",
     "build": "vue-tsc --noEmit && npm run test && vite build",
     "serve": "vite preview",
     "test": "jest"
+  },
+  "types": "src/index.ts",
+  "module": "./dist/samsantech-ui.es.js",
+  "main": "./dist/samsantech-ui.umd.js",
+  "files": [
+    "dist",
+    "src/index.ts",
+    "src/components/*"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/samsantech-ui.es.js",
+      "require": "./dist/samsantech-ui.umd.js"
+    },
+    "./style": "./dist/style.css"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.5",
+    "@vue/compiler-sfc": "^3.0.5"
   },
   "dependencies": {
     "axios": "^0.21.4",
