@@ -1,5 +1,5 @@
 {
-  "name": "samsantech-ui-components",
+  "name": "samsantech-ui",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
