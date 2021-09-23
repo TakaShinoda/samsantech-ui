@@ -1,11 +1,9 @@
 <template>
     <div
-        class="relative inline-block w-full overflow-hidden border-2 border-solid rounded-md text-gray80 h-14"
+        class="relative inline-block w-full overflow-hidden border-2 border-solid rounded-md text-gray-80 h-14"
         :class="`${focusedClass} ${errorClass} ${disabledLabelClass}`"
     >
-        <label
-            class="relative flex items-center h-full px-2 cursor-text"
-        >
+        <label class="relative flex items-center h-full px-2 cursor-text">
             <span
                 class="absolute text-gray-400 select-none"
                 :class="`${smallLabelClass}`"
